@@ -1,6 +1,7 @@
 $orange:#fe8e20;
 $green:#00652e;
 $grey:#464b4f;
+$red:#c30001;
 $font1: 'Poppins',
 sans-serif;
 $font2: 'Amatic SC',
@@ -14,6 +15,8 @@ cursive;
 @import "normalize";
 @import "layout";
 @import "elements";
+@import "article";
+@import "dish_and_product";
 
 body {
 	font: 400 16px/1.2 $font1;
@@ -56,6 +59,8 @@ header {
 
 	@media screen and (max-width: 768px) {
 		margin: 10px 0 0;
+		font-size: 14px;
+		padding-bottom: 10px;
 	}
 
 	a {
@@ -129,15 +134,16 @@ header {
 		position: relative;
 
 		@media screen and (max-width: 768px) {
-			width: 30%;
+			width: 48%;
+			margin-bottom: 20px;
 		}
 
 	}
 
 	label {
-		text-align: center;
+		text-align: left;
 		width: 100%;
-		font-size: 27px;
+		font-size: 23px;
 		color: #fff;
 
 		&:active {
@@ -152,6 +158,7 @@ header {
 
 	span {
 		margin-left: 7px;
+
 	}
 }
 
@@ -162,7 +169,7 @@ header {
 	top: 50px;
 	left: 0;
 	color: $green;
-	padding: 15px;
+	padding: 10px;
 
 	background: rgba(255, 255, 255, 0.9);
 	width: 100%;
@@ -199,7 +206,7 @@ header {
 		padding: 40px 0;
 	}
 
-	a {
+	.rd-more {
 		color: $orange;
 		display: block;
 		text-align: right;
@@ -229,6 +236,11 @@ header {
 		width: 48%;
 	}
 
+	&:hover {
+		opacity: 0.8;
+		transition: .3s;
+	}
+
 	&__main {
 		display: flex;
 		justify-content: space-between;
@@ -236,6 +248,10 @@ header {
 		padding: 5px;
 		background: $orange;
 		color: #fff;
+
+		@media screen and (max-width: 768px) {
+			display: block;
+		}
 	}
 
 	&__inf {
@@ -262,12 +278,39 @@ header {
 	}
 }
 
+div.rd-all-items--dishes{
+    padding: 100px 0;
+	justify-content: flex-start;
+	
+	@media screen and (max-width: 768px) {
+		padding: 20px 0;
+	}
+
+    .rd-item {
+        width: 32%;
+		margin-right: 20px;
+		
+		@media screen and (max-width: 768px) {
+			width: 47%;
+		margin-right: 8px;
+		}
+
+        &:nth-child(3n){
+			margin-right: 0; 
+			
+			@media screen and (max-width: 768px) {
+			margin-right: 8px;
+			}
+        }
+    }
+}
+
 /*Product*/
 .rd-products {
 	background: url("../img/bg-product.jpg");
 	padding: 80px 0;
 
-	a {
+	.rd-more {
 		color: #fff;
 		display: block;
 		text-align: right;
@@ -295,6 +338,15 @@ header {
 	}
 }
 
+.rd-all-products{
+	background:url("../img/bg-product.jpg");
+	padding: 100px 0;
+
+	@media screen and (max-width: 768px) {
+		padding: 30px 0;
+	}
+}
+
 /*Articles*/
 .rd-articles {
 	background: #fff;
@@ -308,8 +360,15 @@ header {
 
 .rd-slider-prev{
 	position:absolute;
-	left:-50px;
+	left:-70px;
 	top:50%;
+	background:none;
+	border:none;
+	outline:none;
+
+	&:hover{
+		opacity:0.7;
+	}
 
 	@media screen and (max-width: 768px) {
 		top:100%;
@@ -319,8 +378,15 @@ header {
 
 .rd-slider-next{
 	position:absolute;
-	right:-50px;
+	right:-70px;
 	top:50%;
+	background:none;
+	border:none;
+	outline:none;
+
+	&:hover{
+		opacity:0.7;
+	}
 
 	@media screen and (max-width: 768px) {
 		top:100%;
@@ -331,6 +397,19 @@ header {
 .rd-article {
 
 	min-height: 300px;
+	outline:none;
+
+	&--blog{
+		margin-top:80px;
+
+		@media screen and (max-width: 768px) {
+			margin-top:30px;
+		}
+
+		&:last-child{
+			margin-bottom: 80px;
+		}
+	}
 
 	&__main {
 		display: flex;
@@ -392,6 +471,7 @@ header {
 			}
 		}
 	}
+
 }
 
 /*Footer*/

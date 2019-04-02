@@ -1,0 +1,132 @@
+.rd-main{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 50px 0 80px;
+
+    @media screen and (max-width:768px){
+        display:block;
+    }
+}
+
+.rd-content{
+    width:75%;
+    border:1px solid $grey;
+    padding: 15px;
+
+    @media screen and (max-width:768px){
+        width:100%;
+    }
+
+    h2{
+        font-size: 45px;
+    }
+
+    p{
+        margin-bottom: 20px;
+    }
+}
+
+.rd-content-inf{
+    display:flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-family: $font3;
+
+    @media screen and (max-width:768px){
+        display:block;
+    }
+
+    img{
+        width:50%;
+
+        @media screen and (max-width:768px){
+            width:100%;
+            margin-bottom: 15px;
+        }
+    }
+
+    &__main{
+        width:45%;
+
+        @media screen and (max-width:768px){
+            width:100%;
+        }
+
+        span{
+            text-transform: uppercase;
+            text-decoration: underline;
+            font-size: 23px;
+        }
+    }
+
+    &__icons{
+        display:flex;
+        justify-content: space-around;
+        align-items: center;
+        font-size: 25px;
+        margin-top: 35px;
+
+        svg:first-child{
+            color:$green;
+        }
+
+        span{
+            color:$red;
+            text-decoration: none;
+            font-style: italic;
+            font-size: 18px;
+        }
+    }
+}
+
+.rd-content-part{
+
+    margin-top: 50px;
+    font-family:$font3;
+    line-height: 1.5;
+
+    p:first-child{
+        text-transform: uppercase;
+        font-size: 25px;
+    }
+
+    span{
+        font-family:$font1;
+        font-size: 30px;
+        background: $orange;
+        padding: 5px 15px;
+        line-height: 1;
+        color:#fff;
+    }
+
+    img{
+        width:30%;
+        float:left;
+        margin: 10px;
+    }
+}
+
+.rd-sidebar{
+    width:20%;
+
+    @media screen and (max-width:768px){
+        width:100%;
+        margin-top: 20px;
+    }
+
+    a+a{
+        margin-top: 30px;
+    }
+}
+
+.rd-add{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img{
+        width:40%;
+        margin-right: 8px;
+    }
+}

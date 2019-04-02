@@ -1,0 +1,33 @@
+div.rd-article__inf--full{
+
+    display:block;
+    
+    img{
+        width:50%;
+        float:left;
+        padding-right:10px;
+
+        @media screen and (max-width:768px){
+            width:100%;
+        }
+    }
+}
+
+.rd-main--article{
+
+    article{
+        width:75%;
+
+        @media screen and (max-width:768px){
+            width:100%;
+        }
+    }
+
+    .rd-article__inf div{
+        width:100%;
+    }
+
+    .rd-article{
+        margin-top: 0;
+    }
+}

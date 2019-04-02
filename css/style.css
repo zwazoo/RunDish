@@ -662,6 +662,150 @@ ul, h1, h2, h3, h4, h5, h6, p {
   padding: 0;
   margin: 0; }
 
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit; }
+
+div.rd-article__inf--full {
+  display: block; }
+  div.rd-article__inf--full img {
+    width: 50%;
+    float: left;
+    padding-right: 10px; }
+    @media screen and (max-width: 768px) {
+      div.rd-article__inf--full img {
+        width: 100%; } }
+
+.rd-main--article article {
+  width: 75%; }
+  @media screen and (max-width: 768px) {
+    .rd-main--article article {
+      width: 100%; } }
+
+.rd-main--article .rd-article__inf div {
+  width: 100%; }
+
+.rd-main--article .rd-article {
+  margin-top: 0; }
+
+.rd-main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  padding: 50px 0 80px; }
+  @media screen and (max-width: 768px) {
+    .rd-main {
+      display: block; } }
+
+.rd-content {
+  width: 75%;
+  border: 1px solid #464b4f;
+  padding: 15px; }
+  @media screen and (max-width: 768px) {
+    .rd-content {
+      width: 100%; } }
+  .rd-content h2 {
+    font-size: 45px; }
+  .rd-content p {
+    margin-bottom: 20px; }
+
+.rd-content-inf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  font-family: "Gloria Hallelujah", cursive; }
+  @media screen and (max-width: 768px) {
+    .rd-content-inf {
+      display: block; } }
+  .rd-content-inf img {
+    width: 50%; }
+    @media screen and (max-width: 768px) {
+      .rd-content-inf img {
+        width: 100%;
+        margin-bottom: 15px; } }
+  .rd-content-inf__main {
+    width: 45%; }
+    @media screen and (max-width: 768px) {
+      .rd-content-inf__main {
+        width: 100%; } }
+    .rd-content-inf__main span {
+      text-transform: uppercase;
+      text-decoration: underline;
+      font-size: 23px; }
+  .rd-content-inf__icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 25px;
+    margin-top: 35px; }
+    .rd-content-inf__icons svg:first-child {
+      color: #00652e; }
+    .rd-content-inf__icons span {
+      color: #c30001;
+      text-decoration: none;
+      font-style: italic;
+      font-size: 18px; }
+
+.rd-content-part {
+  margin-top: 50px;
+  font-family: "Gloria Hallelujah", cursive;
+  line-height: 1.5; }
+  .rd-content-part p:first-child {
+    text-transform: uppercase;
+    font-size: 25px; }
+  .rd-content-part span {
+    font-family: "Poppins", sans-serif;
+    font-size: 30px;
+    background: #fe8e20;
+    padding: 5px 15px;
+    line-height: 1;
+    color: #fff; }
+  .rd-content-part img {
+    width: 30%;
+    float: left;
+    margin: 10px; }
+
+.rd-sidebar {
+  width: 20%; }
+  @media screen and (max-width: 768px) {
+    .rd-sidebar {
+      width: 100%;
+      margin-top: 20px; } }
+  .rd-sidebar a + a {
+    margin-top: 30px; }
+
+.rd-add {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .rd-add img {
+    width: 40%;
+    margin-right: 8px; }
+
 body {
   font: 400 16px/1.2 "Poppins", sans-serif;
   color: #464b4f; }
@@ -709,7 +853,9 @@ header {
   justify-content: space-between; }
   @media screen and (max-width: 768px) {
     .rd-menu {
-      margin: 10px 0 0; } }
+      margin: 10px 0 0;
+      font-size: 14px;
+      padding-bottom: 10px; } }
   .rd-menu a {
     text-decoration: none;
     display: block;
@@ -767,11 +913,12 @@ header {
     position: relative; }
     @media screen and (max-width: 768px) {
       .rd-intro__filter {
-        width: 30%; } }
+        width: 48%;
+        margin-bottom: 20px; } }
   .rd-intro label {
-    text-align: center;
+    text-align: left;
     width: 100%;
-    font-size: 27px;
+    font-size: 23px;
     color: #fff; }
     .rd-intro label:active {
       color: #fe8e20; }
@@ -793,7 +940,7 @@ header {
   top: 50px;
   left: 0;
   color: #00652e;
-  padding: 15px;
+  padding: 10px;
   background: rgba(255, 255, 255, 0.9);
   width: 100%;
   font-size: 20px;
@@ -817,14 +964,14 @@ header {
   @media screen and (max-width: 768px) {
     .rd-dishes {
       padding: 40px 0; } }
-  .rd-dishes a {
+  .rd-dishes .rd-more {
     color: #fe8e20;
     display: block;
     text-align: right;
     margin: 40px 0;
     font-size: 35px;
     height: 40px; }
-    .rd-dishes a:hover {
+    .rd-dishes .rd-more:hover {
       opacity: 0.7;
       -webkit-transition: .3s;
       -o-transition: .3s;
@@ -847,6 +994,11 @@ header {
   @media screen and (max-width: 768px) {
     .rd-item {
       width: 48%; } }
+  .rd-item:hover {
+    opacity: 0.8;
+    -webkit-transition: .3s;
+    -o-transition: .3s;
+    transition: .3s; }
   .rd-item__main {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -860,6 +1012,9 @@ header {
     padding: 5px;
     background: #fe8e20;
     color: #fff; }
+    @media screen and (max-width: 768px) {
+      .rd-item__main {
+        display: block; } }
   .rd-item__inf {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -882,18 +1037,39 @@ header {
         .rd-item__inf div {
           width: 40%; } }
 
+div.rd-all-items--dishes {
+  padding: 100px 0;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start; }
+  @media screen and (max-width: 768px) {
+    div.rd-all-items--dishes {
+      padding: 20px 0; } }
+  div.rd-all-items--dishes .rd-item {
+    width: 32%;
+    margin-right: 20px; }
+    @media screen and (max-width: 768px) {
+      div.rd-all-items--dishes .rd-item {
+        width: 47%;
+        margin-right: 8px; } }
+    div.rd-all-items--dishes .rd-item:nth-child(3n) {
+      margin-right: 0; }
+      @media screen and (max-width: 768px) {
+        div.rd-all-items--dishes .rd-item:nth-child(3n) {
+          margin-right: 8px; } }
+
 /*Product*/
 .rd-products {
   background: url("../img/bg-product.jpg");
   padding: 80px 0; }
-  .rd-products a {
+  .rd-products .rd-more {
     color: #fff;
     display: block;
     text-align: right;
     margin: 40px 0 0;
     font-size: 35px;
     height: 40px; }
-    .rd-products a:hover {
+    .rd-products .rd-more:hover {
       opacity: 0.7;
       -webkit-transition: .3s;
       -o-transition: .3s;
@@ -908,6 +1084,13 @@ header {
   background: url("../img/product.jpg") no-repeat;
   background-size: cover; }
 
+.rd-all-products {
+  background: url("../img/bg-product.jpg");
+  padding: 100px 0; }
+  @media screen and (max-width: 768px) {
+    .rd-all-products {
+      padding: 30px 0; } }
+
 /*Articles*/
 .rd-articles {
   background: #fff;
@@ -917,8 +1100,13 @@ header {
 
 .rd-slider-prev {
   position: absolute;
-  left: -50px;
-  top: 50%; }
+  left: -70px;
+  top: 50%;
+  background: none;
+  border: none;
+  outline: none; }
+  .rd-slider-prev:hover {
+    opacity: 0.7; }
   @media screen and (max-width: 768px) {
     .rd-slider-prev {
       top: 100%;
@@ -926,15 +1114,28 @@ header {
 
 .rd-slider-next {
   position: absolute;
-  right: -50px;
-  top: 50%; }
+  right: -70px;
+  top: 50%;
+  background: none;
+  border: none;
+  outline: none; }
+  .rd-slider-next:hover {
+    opacity: 0.7; }
   @media screen and (max-width: 768px) {
     .rd-slider-next {
       top: 100%;
       left: 50px; } }
 
 .rd-article {
-  min-height: 300px; }
+  min-height: 300px;
+  outline: none; }
+  .rd-article--blog {
+    margin-top: 80px; }
+    @media screen and (max-width: 768px) {
+      .rd-article--blog {
+        margin-top: 30px; } }
+    .rd-article--blog:last-child {
+      margin-bottom: 80px; }
   .rd-article__main {
     display: -webkit-box;
     display: -ms-flexbox;
